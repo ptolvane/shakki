@@ -1,5 +1,5 @@
 
-package shakki;
+package projekti;
 
 
 public class Main {
