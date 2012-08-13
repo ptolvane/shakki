@@ -35,11 +35,9 @@ public class LautaTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void onkoNappuloitaOikeaMaara() {
+    }
 
     // tähän tulee ainakin testejä, jotka tsekkaavat onko laudalla
     // oikea määrä kutakin nappulaa alkutilanteessa ja erilaisten siirtojen
