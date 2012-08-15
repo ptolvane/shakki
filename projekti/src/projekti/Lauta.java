@@ -3,14 +3,14 @@ package projekti;
 public class Lauta {
 
     /** Kaksiulotteinen char-tyypin 8x8 taulukko, johon tallennetaan nappuloiden sijanti shakkilaudalla */
-    char[][] nappulat = new char[8][8];
+    char[][] nappulat;
 
-    void Lauta(){
-        
+    public Lauta(){
+        nappulat = new char[8][8];
     }
 
     /** Piirtää 8x8 shakkilaudan nappuloineen tekstinä */
-    void piirraLauta() {
+    public void piirraLauta() {
         for (int i = 7; i >= 0; i--) {
             System.out.println("\n-----------------");
             for (int j = 0; j < 8; j++) {
@@ -30,7 +30,7 @@ public class Lauta {
     }
 
     /** Tyhjentää nappulat-taulukon */
-    void tyhjennaLauta() {
+    public void tyhjennaLauta() {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 nappulat[i][j] = '\u0000';
@@ -38,8 +38,16 @@ public class Lauta {
         }
     }
 
+    public char[][] getNappulat(){
+        return nappulat;
+    }
+
+    public char getRuutu(int x, int y) {
+        return nappulat[x][y];
+    }
+
     /** Asettaa nappulat aloitusasemiin nappulat-taulukkoon */
-    void asetaNappulat() {
+    public void asetaNappulat() {
         for (int i = 0; i < 8; i++) {
             nappulat[1][i] = 'P';
         }

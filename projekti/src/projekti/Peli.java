@@ -65,6 +65,7 @@ public class Peli {
         omaLauta = new Lauta();
         omaLauta.tyhjennaLauta();
         omaLauta.asetaNappulat();
+        omaLauta.piirraLauta();
         Pelaaja musta = new Pelaaja("musta");
         Pelaaja valkoinen = new Pelaaja("valkoinen");
         valkoinen.sunVuoro(this, musta);
