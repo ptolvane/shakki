@@ -42,6 +42,10 @@ public class Lauta {
         return nappulat;
     }
 
+    public void setRuutu(int x, int y, char nappula) {
+        nappulat[x][y]=nappula;
+    }
+
     public char getRuutu(int x, int y) {
         return nappulat[x][y];
     }

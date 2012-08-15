@@ -7,24 +7,29 @@ public class Peli {
     /** Kyseisen pelin Lauta-olio */
     Lauta omaLauta;
     /** Pitää kirjaa siitä montako siirtoa pelissä on tehty */
-    int moneskoSiirto = 0;
+    int moneskoSiirto;
     /** Pitää kirjaa siitä kenen vuoro on */
     Pelaaja kenenVuoro;
     /** Lukee käyttäjän antaman syötteen */
-    Scanner lukija = new Scanner(System.in);
+    Scanner lukija;
 
     public Peli() {
+        lukija = new Scanner(System.in);
+        moneskoSiirto = 0;
     }
 
     /** Lukee pelaajan antaman syötteen ja jos kyseessä on komento,
      * suorittaa komennon.
      * Muutoin tarkistaa onko siirto laillinen ja tekee siirron */
     public void lueSyote() {
-        String syote = lukija.nextLine();
-        if (tarkistaKomento(syote) == true) {
-            suoritaKomento(syote);
-        } else if (tarkistaSiirto(syote) == true) {
-            kenenVuoro.teeSiirto(syote);
+        while (true) {
+            String syote = lukija.nextLine();
+            if (tarkistaKomento(syote) == true) {
+                suoritaKomento(syote);              // tämä ei selvästikään vielä toimi
+            } else if (tarkistaSiirto(syote) == true) {
+                kenenVuoro.teeSiirto(syote);
+                break;
+            }
         }
         omaLauta.piirraLauta();
         System.out.println(moneskoSiirto);
@@ -51,23 +56,27 @@ public class Peli {
         }
     }
 
-    /** Suorittaa käyttäjän antaman komennon
+    /** Suorittaa käyttäjän antaman komennon.
     @param komento käyttäjän antama syote */
     private static void suoritaKomento(String komento) {
         if (komento.equalsIgnoreCase("q")) {
+            System.exit(0);
         } else if (komento.equalsIgnoreCase("l")) {
         } else if (komento.equalsIgnoreCase("s")) {
+        } else {
+            return;
         }
     }
 
     /** Aloittaa kahden pelaajan shakkipelin */
-    void pelaa() {
+    void aloitaPeli() {
         omaLauta = new Lauta();
         omaLauta.tyhjennaLauta();
         omaLauta.asetaNappulat();
         omaLauta.piirraLauta();
-        Pelaaja musta = new Pelaaja("musta");
-        Pelaaja valkoinen = new Pelaaja("valkoinen");
+        Pelaaja musta = new Pelaaja("musta", omaLauta);
+        Pelaaja valkoinen = new Pelaaja("valkoinen", omaLauta);
+        kenenVuoro = valkoinen;
         valkoinen.sunVuoro(this, musta);
     }
 }
