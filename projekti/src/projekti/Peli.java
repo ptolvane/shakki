@@ -24,7 +24,7 @@ public class Peli {
         if (tarkistaKomento(syote) == true) {
             suoritaKomento(syote);
         } else if (tarkistaSiirto(syote) == true) {
-            kenenVuoro.siirra();
+            kenenVuoro.teeSiirto(syote);
         }
         omaLauta.piirraLauta();
         System.out.println(moneskoSiirto);

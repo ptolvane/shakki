@@ -26,11 +26,7 @@ public class Pelaaja {
 
     /** Siirtää käyttäjän antaman siirron
     @param siirto käyttäjän antama syote */
-    private void teeSiirto(String siirto) {
-    }
-
-    void siirra() {
-        throw new UnsupportedOperationException("Not yet implemented");
+    public void teeSiirto(String siirto) {
     }
 
 }
