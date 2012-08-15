@@ -30,8 +30,6 @@ public class Pelaaja {
     @param siirto käyttäjän antama syote */
     public void teeSiirto(String siirto) {
         String[] jaettuSiirto = siirto.split(" ", 2);
-        System.out.println(Character.getNumericValue(jaettuSiirto[0].charAt(0))-10);
-        System.out.println(Character.getNumericValue(jaettuSiirto[0].charAt(1))-10);
         omaLauta.setRuutu(Character.getNumericValue(jaettuSiirto[0].charAt(1))-1, Character.getNumericValue(jaettuSiirto[0].charAt(0))-10, '\u0000');
         omaLauta.setRuutu(Character.getNumericValue(jaettuSiirto[1].charAt(1))-1, Character.getNumericValue(jaettuSiirto[1].charAt(0))-10, 'P');
     }
