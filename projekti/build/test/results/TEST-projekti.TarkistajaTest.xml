@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Annie" name="projekti.TarkistajaTest" tests="8" time="2.063" timestamp="2012-09-16T17:17:51">
+<testsuite errors="0" failures="0" hostname="Annie" name="projekti.TarkistajaTest" tests="27" time="1.25" timestamp="2012-09-16T19:23:14">
   <properties>
     <property name="default.javac.source" value="1.6" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -262,17 +262,37 @@
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.arch.data.model" value="32" />
   </properties>
-  <testcase classname="projekti.TarkistajaTest" name="omanNappulanSiirto" time="1.531" />
-  <testcase classname="projekti.TarkistajaTest" name="toisenNappulanSiirto" time="0.047" />
-  <testcase classname="projekti.TarkistajaTest" name="onhanNappulanPaalleLiikkuminenLyonti" time="0.031" />
-  <testcase classname="projekti.TarkistajaTest" name="eihanTyhjanPaalleLiikkuminenOleLyonti" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="omanNappulanSiirto" time="0.344" />
+  <testcase classname="projekti.TarkistajaTest" name="toisenNappulanSiirto" time="0.031" />
+  <testcase classname="projekti.TarkistajaTest" name="onhanNappulanPaalleLiikkuminenLyonti" time="0.015" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanTyhjanPaalleLiikkuminenOleLyonti" time="0.032" />
   <testcase classname="projekti.TarkistajaTest" name="siirtyyhanSamaanPaikkaan" time="0.016" />
-  <testcase classname="projekti.TarkistajaTest" name="eihanSiirrySamaanPaikkaan" time="0.047" />
-  <testcase classname="projekti.TarkistajaTest" name="negatiivinenEiPysyLaudalla" time="0.031" />
-  <testcase classname="projekti.TarkistajaTest" name="yhdeksanEiPysyLaudalla" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanSiirrySamaanPaikkaan" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="negatiivinenEiPysyLaudalla" time="0.015" />
+  <testcase classname="projekti.TarkistajaTest" name="yhdeksanEiPysyLaudalla" time="0.031" />
+  <testcase classname="projekti.TarkistajaTest" name="lyokoOmaaNappulaa" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="liikkuuhanValkeaMoukkaVääräänSuuntaan" time="0.031" />
+  <testcase classname="projekti.TarkistajaTest" name="liikkuuhanMustaMoukkaVääräänSuuntaan" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="onkoValkea" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="onkoMusta" time="0.015" />
+  <testcase classname="projekti.TarkistajaTest" name="onhanMoukanKaksoisaskel" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanOleMoukanKaksoisaskel" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="onkoMoukanLyonti" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanOleMoukanOhestalyonti" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="kayhanTorninTarkistus" time="0.0" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanKayTorninSiirroksi" time="0.015" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanKayRatsunSiirroksi" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="kayhanRatsunSiirroksi" time="0.015" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanKayLahetinSiirroksi" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="kayhanLahetinSiirroksi" time="0.031" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanKayDaaminSiirroksi" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="kayhanDaaminSiirroksi" time="0.0" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanKayKuninkaanSiirroksi" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="kayhanKuninkaanSiirroksi" time="0.015" />
   <system-out><![CDATA[Yritit siirtää nappulan lähtöruutuun
 Nappula ei pysy laudalla
 Nappula ei pysy laudalla
+Yritit lyödä oman nappulasi
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
