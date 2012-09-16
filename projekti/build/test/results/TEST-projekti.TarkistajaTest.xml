@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Annie" name="projekti.LautaTest" tests="1" time="0.266" timestamp="2012-09-16T17:17:49">
+<testsuite errors="0" failures="0" hostname="Annie" name="projekti.TarkistajaTest" tests="8" time="2.063" timestamp="2012-09-16T17:17:51">
   <properties>
     <property name="default.javac.source" value="1.6" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -262,7 +262,17 @@
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.arch.data.model" value="32" />
   </properties>
-  <testcase classname="projekti.LautaTest" name="onkoNappuloitaOikeaMaara" time="0.016" />
-  <system-out><![CDATA[]]></system-out>
+  <testcase classname="projekti.TarkistajaTest" name="omanNappulanSiirto" time="1.531" />
+  <testcase classname="projekti.TarkistajaTest" name="toisenNappulanSiirto" time="0.047" />
+  <testcase classname="projekti.TarkistajaTest" name="onhanNappulanPaalleLiikkuminenLyonti" time="0.031" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanTyhjanPaalleLiikkuminenOleLyonti" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="siirtyyhanSamaanPaikkaan" time="0.016" />
+  <testcase classname="projekti.TarkistajaTest" name="eihanSiirrySamaanPaikkaan" time="0.047" />
+  <testcase classname="projekti.TarkistajaTest" name="negatiivinenEiPysyLaudalla" time="0.031" />
+  <testcase classname="projekti.TarkistajaTest" name="yhdeksanEiPysyLaudalla" time="0.016" />
+  <system-out><![CDATA[Yritit siirtää nappulan lähtöruutuun
+Nappula ei pysy laudalla
+Nappula ei pysy laudalla
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

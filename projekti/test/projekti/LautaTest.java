@@ -5,7 +5,6 @@ package projekti;
  * and open the template in the editor.
  */
 import java.util.Arrays;
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -42,22 +41,9 @@ public class LautaTest {
     }
 
     @Test
-    public void onkoTyhjennettyLautaTyhja() {
-        omaLauta.tyhjennaLauta();
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                assertEquals('\u0000', omaLauta.getRuutu(i, j));
-                {
-                }
-            }
-        }
-    }
-
-    @Test
     public void onkoNappuloitaOikeaMaara() {
         char[] oikeatNappulat = {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p', 't', 't', 'r', 'r', 'l', 'l', 'k', 'd', 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P', 'T', 'T', 'R', 'R', 'L', 'L', 'K', 'D', '\u0000'};
         Arrays.sort(oikeatNappulat);
-        omaLauta.asetaNappulat();
         char[] laudanNappulat = {'\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000', '\u0000'};
         int indeksi = 0;
         for (int i = 0; i < 8; i++) {

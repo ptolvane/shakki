@@ -1,36 +1,45 @@
 package projekti;
 
+/** Hallinnoi 8x8 shakkilautaa ja nappuloita */
 public class Lauta {
 
     /** Kaksiulotteinen char-tyypin 8x8 taulukko, johon tallennetaan nappuloiden sijanti shakkilaudalla */
     char[][] nappulat;
+    /** Onko kuningas liikkunut {valkea, musta}*/
+    boolean[] onkoKuningasLiikkunut;
+    char[][] onkoRuutuunTultuKaksoisaskeleella;
 
-    public Lauta(){
+    /** Konstruktori alustaa laudan */
+    public Lauta() {
         nappulat = new char[8][8];
-    }
-
-    /** Piirtää 8x8 shakkilaudan nappuloineen tekstinä */
-    public void piirraLauta() {
-        for (int i = 7; i >= 0; i--) {
-            System.out.println("\n-----------------");
+        onkoKuningasLiikkunut = new boolean[2];
+        onkoRuutuunTultuKaksoisaskeleella = new char[8][8];
+        for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                System.out.print("|");
-                if (nappulat[i][j] != '\u0000') { // jos ruudussa on nappula, piirrä se
-                    System.out.print(nappulat[i][j]);
-                } else if ((i % 2 == 0 && j % 2 == 0) || (i % 2 == 1 && j % 2 == 1)) {
-                    System.out.print(" "); // ellei nappulaa, joka toiseen valkea ruutu
+                if (nappulat[i][j] == 'T' || nappulat[i][j] == 't' || nappulat[i][j] =='K' || nappulat[i][j]=='k') {
+                    onkoRuutuunTultuKaksoisaskeleella[i][j] = nappulat[i][j];
                 } else {
-                    System.out.print("."); // loppuihin musta ruutu
+                    onkoRuutuunTultuKaksoisaskeleella[i][j] = '\u0000';
                 }
             }
-            System.out.print("| " + (i + 1));
         }
-        System.out.println("\n-----------------");
-        System.out.println(" a b c d e f g h");
+        tyhjennaLauta();
+        asetaNappulat();
+    }
+
+    /** Tyhjentää kaksoisaskel-taulukon */
+    public void siivoaKaksoisaskeltaulukko() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (onkoRuutuunTultuKaksoisaskeleella[i][j] != getRuutu(i, j)) {
+                    onkoRuutuunTultuKaksoisaskeleella[i][j] = '\u0000';
+                }
+            }
+        }
     }
 
     /** Tyhjentää nappulat-taulukon */
-    public void tyhjennaLauta() {
+    private void tyhjennaLauta() {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 nappulat[i][j] = '\u0000';
@@ -38,12 +47,8 @@ public class Lauta {
         }
     }
 
-    public char[][] getNappulat(){
-        return nappulat;
-    }
-
     public void setRuutu(int x, int y, char nappula) {
-        nappulat[x][y]=nappula;
+        nappulat[x][y] = nappula;
     }
 
     public char getRuutu(int x, int y) {
@@ -51,7 +56,7 @@ public class Lauta {
     }
 
     /** Asettaa nappulat aloitusasemiin nappulat-taulukkoon */
-    public void asetaNappulat() {
+    protected void asetaNappulat() {
         for (int i = 0; i < 8; i++) {
             nappulat[1][i] = 'P';
         }
